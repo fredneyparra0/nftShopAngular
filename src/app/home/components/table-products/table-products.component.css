@@ -1,0 +1,9 @@
+/*-------   Table Styles  -------*/
+
+.table {
+    width: 100%;
+}
+
+.table__tr {
+    margin: 10px;
+}

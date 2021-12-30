@@ -1,0 +1,32 @@
+/*-------   Header Styles  -------*/
+.header { 
+    padding: 15px;
+    margin: 15px;
+    background-color: var(--bg-primary);
+    border-radius: 10px;
+    position: fixed;
+    width: 95%;
+    top: 0;
+}
+
+.header__li {
+    color: var(--color-white);
+}
+
+.header__li--space {
+margin: 0 10px;
+}
+
+.header__title {
+    color: var(--color-white);
+}
+
+.header__boxinputicon {
+    position: relative;
+}
+
+.header__iconinput {
+    position: absolute;
+    right: 0;
+    top: 6px;
+}

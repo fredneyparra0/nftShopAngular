@@ -1,22 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
 /*-------   Global Styles  -------*/
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: monospace;
-}
-
-body {
-    background-color: rgb(240, 240, 240);
-}
-
-:root {
-    --bg-primary: rgb(101, 110, 139);
-    --bg-primary-btn: rgb(41, 106, 180);
-    --bg-primary-btn-hover: rgb(80, 125, 177);
-    --color-white: #fff;
-}
 
 .d-block {
     display: block;
@@ -159,4 +141,47 @@ body {
 
 .text-align-end {
     text-align: end;
+}
+
+/*-------   Header Styles  -------*/
+.header { 
+    padding: 15px;
+    margin: 15px;
+    background-color: var(--bg-primary);
+    border-radius: 10px;
+    position: fixed;
+    width: 95%;
+    top: 0;
+}
+
+.header__li {
+    color: var(--color-white);
+}
+
+.header__li--space {
+margin: 0 10px;
+}
+
+.header__title {
+    color: var(--color-white);
+}
+
+.header__boxinputicon {
+    position: relative;
+}
+
+.header__iconinput {
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+
+/*-------   Table Styles  -------*/
+
+.table {
+    width: 100%;
+}
+
+.table__tr {
+    margin: 10px;
 }
