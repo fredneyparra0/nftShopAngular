@@ -12,4 +12,12 @@ export class SlideNoticeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  nextSlide () {
+
+  }
+
+  previouslySlide () {
+    
+  }
+
 }
