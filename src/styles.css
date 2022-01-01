@@ -18,6 +18,14 @@ body {
     --color-white: #fff;
 }
 
+.box-radius {
+    padding: 15px;
+    margin: 15px;
+    background-color: var(--bg-primary);
+    border-radius: 10px;
+    width: 95%;
+}
+
 .d-block {
     display: block;
 }
@@ -118,6 +126,10 @@ body {
     max-width: 350px;
 }
 
+.w-33 {
+    width: 33%;
+}
+
 .w-25 {
     width: 25%;
 }
@@ -187,4 +199,16 @@ body {
 
 .fz-1-5 {
     font-size: 1.5em;
+}
+
+.fz-3 {
+    font-size: 3em;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-white {
+    color: #fff;
 }

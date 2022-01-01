@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { INews } from '../../interfaces/newsInterfaces';
+import { NewsService } from '../../services/news.service';
 
 @Component({
   selector: 'app-slide-notice',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlideNoticeComponent implements OnInit {
 
-  constructor() { }
+  notices: INews[] = [];
+
+  constructor(private newsSerivice: NewsService) { }
 
   ngOnInit(): void {
+    if (this.newsSerivice.news.length != 0) {
+      console.log('data ==> ',this.newsSerivice.news);
+      this.notices = this.newsSerivice.news
+    }
+
+    // console.log(this.newsSerivice.news);
   }
 
   nextSlide () {

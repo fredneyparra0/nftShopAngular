@@ -2,25 +2,10 @@
     <h4 class="ml-2 fz-1-5">Notices Today</h4>
     <div class="d-flex flex-justify-center flex-align-center">
         <div class="w-95 d-flex flex-justify-center overflow-hidden">
-            <div class="w-250 m-1">
-                <img class="h-150 img-size-contain" src="../../../../assets/images/chartNft.png" alt="image">
-                <h4>Title Article</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus molestias fugit eligendi </p>
-            </div>
-            <div class="w-250 m-1">
-                <img class="h-150 img-size-contain" src="../../../../assets/images/chartNft.png" alt="image">
-                <h4>Title Article</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus molestias fugit eligendi </p>
-            </div>
-            <div class="w-250 m-1">
-                <img class="h-150 img-size-contain" src="../../../../assets/images/chartNft.png" alt="image">
-                <h4>Title Article</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus molestias fugit eligendi </p>
-            </div>
-            <div class="w-250 m-1">
-                <img class="h-150 img-size-contain" src="../../../../assets/images/chartNft.png" alt="image">
-                <h4>Title Article</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus molestias fugit eligendi </p>
+            <div *ngFor="let notice of notices" class="w-250 m-1">
+                <img class="h-150 img-size-contain" [src]="notice.image" alt="image">
+                <h4>{{ notice.title }}</h4>
+                <p>{{ notice.description }}</p>
             </div>
         </div>
     </div>

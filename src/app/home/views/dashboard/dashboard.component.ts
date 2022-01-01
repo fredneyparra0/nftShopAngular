@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from '../../services/news.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private newService: NewsService) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    await this.newService.getAllNews();
   }
 
 }
