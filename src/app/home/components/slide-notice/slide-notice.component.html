@@ -2,6 +2,9 @@
     <h4 class="ml-2 fz-1-5">Notices Today</h4>
     <div class="d-flex flex-justify-center flex-align-center">
         <div class="w-95 d-flex flex-justify-center overflow-hidden">
+            <div *ngIf="notices.length <= 0" class="d-flex flex-justify-center">
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
             <div *ngFor="let notice of notices" class="w-250 m-1">
                 <img class="h-150 img-size-contain" [src]="notice.image" alt="image">
                 <h4>{{ notice.title }}</h4>

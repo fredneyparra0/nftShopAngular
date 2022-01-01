@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { INews } from '../../interfaces/newsInterfaces';
 import { NewsService } from '../../services/news.service';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-slide-notice',
@@ -10,24 +11,20 @@ import { NewsService } from '../../services/news.service';
 export class SlideNoticeComponent implements OnInit {
 
   notices: INews[] = [];
+  products: any[] = [];
 
-  constructor(private newsSerivice: NewsService) { }
+  constructor(private newsService: NewsService) { }
 
-  ngOnInit(): void {
-    if (this.newsSerivice.news.length != 0) {
-      console.log('data ==> ',this.newsSerivice.news);
-      this.notices = this.newsSerivice.news
-    }
-
-    // console.log(this.newsSerivice.news);
+  ngOnInit():void {
+    this.loadData();
   }
-
-  nextSlide () {
-
-  }
-
-  previouslySlide () {
-    
+  
+  async loadData () {
+    // this setTimeOut is for example 
+    setTimeout(async () => {
+      await this.newsService.getAllNews();
+      this.notices = this.newsService.news;
+    },1000);
   }
 
 }

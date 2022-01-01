@@ -122,8 +122,9 @@ body {
     padding: 1em;
 }
 
-.max-w-350 {
-    max-width: 350px;
+.max-w-300 {
+    max-width: 300px;
+    min-width: 300px;
 }
 
 .w-33 {

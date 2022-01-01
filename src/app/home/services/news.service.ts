@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApolloQueryResult } from '@apollo/client/core/types';
-import { Apollo, gql} from 'apollo-angular';
+import { Apollo, gql } from 'apollo-angular';
 
 import { INews } from '../interfaces/newsInterfaces';
 
@@ -27,17 +27,8 @@ export class NewsService {
     }
     `;
 
-    const dataRes: any = this.apollo.query({query}).toPromise();
-
-    return dataRes;
-
-    // await dataRes
-
-    // this.news = [...dataRes.__zone_symbol__value.data.newsAll]
-
-    // dataRes.then(({ data: {newsAll } }:ApolloQueryResult<any>) => {
-    //   this.news = newsAll;
-    // });
-
+    const dataRes: Promise<ApolloQueryResult<any>> = this.apollo.query({query}).toPromise();
+    const resNews = await dataRes;
+    this.news = [...resNews.data.newsAll];
   }
 }

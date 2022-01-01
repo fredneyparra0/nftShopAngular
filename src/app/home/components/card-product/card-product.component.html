@@ -1,6 +1,6 @@
 <div class="d-flex flex-justify-center">
-    <img class="img-size-contain h-200 w-250 border-radius-6" src="../../../../assets/images/nft1.jpg">
+    <img class="img-size-contain h-200 w-250 border-radius-6" [src]="data?.image">
 </div>
-<h3 class="ml-2 mt-1">Monkey Flow</h3>
-<p class="ml-2 mt-1 text-align-end mr-2">0.00000014 ETH</p>
+<h3 class="ml-2 mt-1">{{data?.name}}</h3>
+<p class="ml-2 mt-1 text-align-end mr-2">{{ data?.priceEth }} ETH</p>
 <a class="d-block text-center mt-1" href="#">View</a>
