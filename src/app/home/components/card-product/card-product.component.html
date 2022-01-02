@@ -1,6 +1,6 @@
 <div class="d-flex flex-justify-center">
-    <img class="img-size-contain h-200 w-250 border-radius-6" [src]="data?.image">
+    <img class="img-size-contain h-200 w-250 border-radius-6 box__img--scale" [src]="data?.image">
 </div>
 <h3 class="ml-2 mt-1">{{data?.name}}</h3>
 <p class="ml-2 mt-1 text-align-end mr-2">{{ data?.priceEth }} ETH</p>
-<a class="d-block text-center mt-1" href="#">View</a>
+<a class="d-block text-center mt-1" [routerLink]="['/product', data?._id]">View</a>

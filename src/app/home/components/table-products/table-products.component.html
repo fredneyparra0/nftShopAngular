@@ -1,12 +1,12 @@
-<div class="pb-2 m-1 bg-white border-radius-6">
+<div class="pb-2 m-1 bg-white border-radius-6" id="table">
     <div class="box d-flex flex-wrap flex-justify-center">
 
-        <app-card-product *ngFor="let product of products, index as i" [data]="products[i]" class="w-25 max-w-300 mt-2"></app-card-product>
+        <app-card-product *ngFor="let product of products, index as i" [data]="products[i]" class="w-25 max-w-300 mt-2 card__product"></app-card-product>
 
     </div>
     <div class="d-flex flex-justify-center flex-align-center">
-        <p class="btn text-white fz-1-5 m-1 text-decoration-none cursor-pointer" (click)="previouslyPageProducts()"><</p>
+        <a class="btn text-white fz-1-5 m-1 text-decoration-none cursor-pointer" href="#table" (click)="previouslyPageProducts()"><</a>
         <span>{{ pageProducts }}</span>
-        <p class="btn text-white fz-1-5 m-1 text-decoration-none cursor-pointer" (click)="nextPageProducts()" >></p>
+        <a class="btn text-white fz-1-5 m-1 text-decoration-none cursor-pointer" href="#table" (click)="nextPageProducts()" >></a>
     </div>
 </div>

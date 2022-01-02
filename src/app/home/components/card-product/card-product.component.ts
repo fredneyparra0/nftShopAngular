@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { IProducts } from '../../interfaces/productsInterface';
+
 
 @Component({
   selector: 'app-card-product',
@@ -8,12 +10,12 @@ import { IProducts } from '../../interfaces/productsInterface';
 })
 export class CardProductComponent implements OnInit {
 
-  // @Input() data?: IProducts;
   @Input() data: any;
   
-  constructor() { }
-  
+  constructor( private activatedRouter: ActivatedRoute ) { }
+
   ngOnInit(): void {
+
   }
 
 }

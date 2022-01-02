@@ -186,3 +186,9 @@ margin: 0 10px;
 .table__tr {
     margin: 10px;
 }
+
+
+.box__img--scale:hover {
+    transition: .5s all;
+    transform: scale(1.1);
+}

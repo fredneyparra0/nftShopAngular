@@ -28,14 +28,12 @@ export class TableProductsComponent implements OnInit {
 
   async nextPageProducts () {
     this.pageProducts += 1;
-    // this setTimeOut is for example
     await this.productsService.getAllProducts(this.pageProducts);
     this.products = this.productsService.products;
   }
 
   async previouslyPageProducts () {
     this.pageProducts -= 1;
-    // this setTimeOut is for example
     await this.productsService.getAllProducts(this.pageProducts);
     this.products = this.productsService.products;
   }

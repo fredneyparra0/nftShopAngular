@@ -6,6 +6,8 @@ import { SharedModule } from '../shared/shared.module';
 import { TableProductsComponent } from './components/table-products/table-products.component';
 import { CardProductComponent } from './components/card-product/card-product.component';
 import { SlideNoticeComponent } from './components/slide-notice/slide-notice.component';
+import { ProductComponent } from './views/product/product.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,11 +17,13 @@ import { SlideNoticeComponent } from './components/slide-notice/slide-notice.com
     FilterComponent,
     TableProductsComponent,
     CardProductComponent,
-    SlideNoticeComponent
+    SlideNoticeComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ]
 })
 export class HomeModule { }

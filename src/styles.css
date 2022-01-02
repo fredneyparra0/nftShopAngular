@@ -38,8 +38,16 @@ body {
     justify-content: space-between;
 }
 
+.flex-space-evenly {
+    justify-content: space-evenly;
+}
+
 .flex-align-center {
     align-items: center;
+}
+
+.flex-align-end {
+    align-items: flex-end;
 }
 
 .flex-justify-center {
@@ -118,6 +126,10 @@ body {
     margin-right: 2em;
 }
 
+.p-0-5 {
+    padding: 0.5em;
+}
+
 .p-1 {
     padding: 1em;
 }
@@ -125,6 +137,11 @@ body {
 .max-w-300 {
     max-width: 300px;
     min-width: 300px;
+}
+
+.max-w-600 {
+    max-width: 600px;
+    min-width: 600px;
 }
 
 .w-33 {
@@ -147,6 +164,10 @@ body {
     width: 40%;
 }
 
+.w-550 {
+    width: 550px;
+}
+
 .w-5 {
     width: 50%;
 }
@@ -157,6 +178,10 @@ body {
 
 .h-200 {
     height: 200px;
+}
+
+.h-400 {
+    height: 400px;
 }
 
 .w-250 {
@@ -202,6 +227,10 @@ body {
     font-size: 1.5em;
 }
 
+.fz-1-2 {
+    font-size: 1.2em;
+}
+
 .fz-3 {
     font-size: 3em;
 }
@@ -212,4 +241,9 @@ body {
 
 .text-white {
     color: #fff;
+}
+
+.card__product {
+    padding: 5px;
+    box-shadow: 1px 2px 8px 2px #d5d5d5;
 }
