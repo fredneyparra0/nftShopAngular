@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { AuthenticationModule } from './authentication/authentication.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     SharedModule,
     HomeModule,
+    AuthenticationModule,
     GraphQLModule,
     HttpClientModule,
     RouterModule
