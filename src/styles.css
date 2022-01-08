@@ -148,6 +148,10 @@ body {
     padding: 6px;
 }
 
+.p-10 {
+    padding: 10px !important;
+}
+
 .max-w-300 {
     max-width: 300px;
     min-width: 300px;

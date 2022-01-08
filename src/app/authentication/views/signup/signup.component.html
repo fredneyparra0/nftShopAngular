@@ -2,30 +2,48 @@
 
 <div class="container-box mt-7 d-flex">
     <div class="w-5 p-1">
-        <form >
+        <form [formGroup]="formCreate">
             <div class="d-flex flex-justify-center">
                 <img class="border-radius-50 h-150 mt-2" src="../../../../assets/images/nft2.jpg">
             </div>
             <div class="d-flex flex-direction-column flex-justify-center">
                 <div class="d-flex flex-direction-column p-1 flex-justify-center">
                     <label class="text-white fz-16">Nombre</label>
-                    <input class="w-80 p-5 border-radius-6 fz-16 border-none input-txt" type="text">
+                    <input class="w-80 p-10 border-radius-6 fz-16 border-none input-txt" type="text" formControlName="name" (keyup)="eventInput('name')">
+                    <span class="validationspan redvalidation" *ngIf="!formCreate.value.name && nameEmpty">Name is required</span>
                 </div>
                 <div class="p-1 d-flex flex-direction-column flex-justify-center">
                     <label class="text-white fz-16">Email</label>
-                    <input class="w-80 p-5 border-radius-6 fz-16 border-none input-txt" type="text">
+                    <input class="w-80 p-10 border-radius-6 fz-16 border-none input-txt" type="text" formControlName="email" (keyup)="eventInput('email')">
+                    <span class="validationspan redvalidation" *ngIf="!formCreate.value.email && emailEmpty">Email is required</span>
+                    <span class="validationspan redvalidation" *ngIf="formCreate.controls['email'].invalid">thi not is a email</span>
                 </div>
                 <div class="p-1 d-flex flex-direction-column flex-justify-center">
                     <label class="text-white fz-16">Password</label>
-                    <input class="w-80 p-5 border-radius-6 fz-16 border-none input-txt" type="password">
+                    <input class="w-80 p-10 border-radius-6 fz-16 border-none input-txt" type="password" formControlName="pass" (keyup)="eventInput('pass')">
+                    <span class="validationspan redvalidation" *ngIf="formCreate.controls['pass'].invalid && passEmpty">Pass is required and min characters is 5 letters and max 16</span>
                 </div>
+                <div *ngIf="createdSuccessful" class="text-center validationspan fz-16 greenvalidation">
+                    register successful please again one moment
+                </div>
+                <!--<div *ngIf="!createdSuccessful" class="text-center validationspan fz-16 redvalidation">
+                    error in register please try again
+                </div>-->
                 <div class="p-1 d-flex flex-justify-center">
-                    <button class="btn p-1 w-40 cursor-pointer border-none text-white">Register now</button>
+                    <button class="btn p-1 w-40 cursor-pointer border-none text-white" type="submit" (click)="createUser()" [disabled]="!formCreate.valid">Register now</button>
                 </div>
             </div>
         </form>
     </div>
     <div class="w-5 p-1">
+
+        <div *ngIf="createdSuccessful" >
+            es true
+        </div>
+        <div *ngIf="!createdSuccessful" >
+            es false
+        </div> 
+
         Register now and start to publisher your's nfts
     </div>
 </div>

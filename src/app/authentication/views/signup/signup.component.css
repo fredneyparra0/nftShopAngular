@@ -1,0 +1,12 @@
+.validationspan {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.redvalidation {
+    color: #ff9797;
+}
+
+.greenvalidation {
+    color: #99ff99;
+}
